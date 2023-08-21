@@ -30,7 +30,7 @@ const MenuItem = ({ data }) => {
             <Text style={{ marginLeft: 20 }}>{data.time} mins</Text>
           </View>
           <View>
-            <Text style={{ marginLeft: 10, marginTop: 3, color: "gray" }}>
+            <Text style={{ marginLeft: 10, marginTop: 3, color: "gray", fontSize: 16 }}>
               {data.adress}
             </Text>
           </View>
