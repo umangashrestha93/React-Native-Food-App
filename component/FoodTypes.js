@@ -29,10 +29,11 @@ const FoodTypes = () => {
     }
 ]
   return (
-    <View>
-        <View style={{backgroundColor: 'orange', width: '50%', justifyContent:'center',alignItems: 'center', marginTop: 7, height: '17%', marginLeft: 10, borderRadius: 7}}>
+    <View style={{margin: 10}}>
+        {/* <View style={{backgroundColor: 'orange', width: '50%', justifyContent:'center',alignItems: 'center', marginTop: 7, height: '17%', marginLeft: 10, borderRadius: 7}}>
         <Text style={{fontSize: 20, marginLeft: 10, color: 'white',}}>Our Famous Dishes</Text>
-        </View>
+        </View> */}
+        <Text style={{fontSize: 19, fontWeight: '500', color: 'gray', marginTop:10, marginBottom: 6}}>What is your favourite dishes?</Text>
     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       {
         types.map((item, index)=>(
