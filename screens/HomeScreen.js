@@ -3,6 +3,7 @@ import React from "react";
 import { SafeAreaView } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import Carousel from "../component/Carousel";
+import FoodTypes from "../component/FoodTypes";
 
 const HomeScreen = () => {
   return (
@@ -21,7 +22,10 @@ const HomeScreen = () => {
         <TextInput placeholder="Search for Resturant" />
         <AntDesign name="search1" size={24} color="black" />
       </View>
+      {/**Image Slider */}
       <Carousel />
+      {/**Types of dishes */}
+      <FoodTypes />
       
     </SafeAreaView>
   );
