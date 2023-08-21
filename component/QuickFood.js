@@ -10,7 +10,7 @@ const QuickFood = () => {
       <Text style={{fontSize: 16, marginBottom: 6, color: 'black', fontWeight: '500'}}> Get it Quickly</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       {data.map((items, index)=>(
-        <Pressable style={{margin:10}}>
+        <Pressable style={{margin:10}} key={`data${index}`}>
             <ImageBackground source={{uri: items.image}} style={{aspectRatio: 5/6, height: 170}} imageStyle={{borderRadius: 6}}>
                 <Text style={{fontSize: 27, fontWeight: '900', color: 'white', top: '75%'}}>{items.offer} OFF</Text>
 

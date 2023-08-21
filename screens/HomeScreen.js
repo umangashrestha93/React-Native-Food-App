@@ -7,8 +7,11 @@ import FoodTypes from "../component/FoodTypes";
 import QuickFood from "../component/QuickFood";
 import { StatusBar } from "expo-status-bar";
 import { Ionicons } from '@expo/vector-icons';
+import Hotels from "../data/Hotels";
+import MenuItem from "../component/MenuItem";
 
 const HomeScreen = () => {
+    const HotelData = Hotels
   return (
     <>
     <StatusBar />
@@ -47,6 +50,10 @@ const HomeScreen = () => {
         <Text style={{color:'gray'}}>Sort by price</Text>
       </Pressable>
       </View>
+      {HotelData.map((item, index)=>(
+        <MenuItem data={item} key={`HotelData${index}`}/>
+      ))}
+      
       
     </ScrollView>
     </>

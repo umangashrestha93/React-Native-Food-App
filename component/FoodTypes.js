@@ -37,7 +37,7 @@ const FoodTypes = () => {
     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       {
         types.map((item, index)=>(
-            <View style={{margin: 9}} key={index}>
+            <View style={{margin: 9}} key={`types${index}`}>
                 <Image source={{uri: item.image}} style={{width: 60, height: 60, borderRadius: 30}}/>
                 <Text style={{fontSize: 12, fontWeight: '500', textAlign: 'center', marginTop: 5}}>{item.name}</Text>
             </View>
