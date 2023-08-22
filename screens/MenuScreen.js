@@ -48,6 +48,16 @@ const MenuScreen = () => {
                 <AntDesign name="hearto" size={22} color="black" />
                 </View>
             </View>
+            <View style={{flexDirection: 'row', marginLeft: 10, alignItems: 'center'}}>
+            <AntDesign
+              name="star"
+              size={20}
+              color="green"
+            />
+                <Text style={{marginLeft: 3, fontSize: 16}}>{route.params.rating}</Text>
+                <Text style={{marginLeft: 10}}>.</Text>
+                <Text style={{marginLeft: 10, fontSize: 16}}>{route.params.time} mins</Text>
+            </View>
         </View>
       </View>
     </SafeAreaView>
