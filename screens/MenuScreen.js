@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView } from "react-native";
 import React from "react";
-import { Ionicons, AntDesign } from "@expo/vector-icons";
+import { Ionicons, AntDesign, Foundation } from "@expo/vector-icons";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
 const MenuScreen = () => {
@@ -57,6 +57,13 @@ const MenuScreen = () => {
                 <Text style={{marginLeft: 3, fontSize: 16}}>{route.params.rating}</Text>
                 <Text style={{marginLeft: 10}}>.</Text>
                 <Text style={{marginLeft: 10, fontSize: 16}}>{route.params.time} mins</Text>
+            </View>
+            <View >
+                <Text style={{marginLeft: 10, fontSize: 16, color: 'gray', marginTop: 10}}>{route.params.cuisines}</Text>
+            </View>
+            <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 12}}>
+                <Text style={{fontSize: 16, fontWeight:'600', marginLeft: 10}}>Outlet</Text>
+                <Text style={{marginLeft: 10, fontSize: 16, color: 'gray'}}>{route.params.address}</Text>
             </View>
         </View>
       </View>
