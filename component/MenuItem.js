@@ -1,6 +1,6 @@
 import { View, Text, Pressable, Image } from "react-native";
 import React from "react";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign,Foundation, MaterialCommunityIcons  } from "@expo/vector-icons";
 
 const MenuItem = ({ data }) => {
   console.log(data);
@@ -18,7 +18,7 @@ const MenuItem = ({ data }) => {
             {data.name}
           </Text>
           <View
-            style={{ flexDirection: "row", alignItems: "center", marginTop: 3 }}
+            style={{ flexDirection: "row", alignItems: "center", marginTop: 5 }}
           >
             <AntDesign
               name="star"
@@ -30,13 +30,19 @@ const MenuItem = ({ data }) => {
             <Text style={{ marginLeft: 20 }}>{data.time} mins</Text>
           </View>
           <View>
-            <Text style={{ marginLeft: 10, marginTop: 3, color: "gray", fontSize: 16 }}>
+            <Text style={{ marginLeft: 10, marginTop: 5, color: "gray", fontSize: 16 }}>
               {data.adress}
             </Text>
           </View>
+          <View style={{marginTop: 5, flexDirection: 'row', alignItems: 'center', marginLeft: 10}}>
+          <Foundation name="dollar" size={24} color="black" />
+            <Text style={{marginLeft: 5, fontSize: 16, fontWeight: '500'}}>{data.cost_for_two} for two</Text>
+          </View>
+          <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 5}}>
+          <MaterialCommunityIcons name="bike-fast" size={24} color="black" style={{marginLeft: 10,}} />
+          <Text style={{marginLeft: 5, fontSize: 16}}>FREE DELIVERY</Text>
+          </View>
         </View>
-
-        <View></View>
       </Pressable>
     </View>
   );

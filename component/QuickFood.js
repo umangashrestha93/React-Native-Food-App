@@ -20,7 +20,6 @@ const QuickFood = () => {
             <AntDesign name="star" size={20} color="green" />
             <Text style={{marginLeft:7}}>{items.rating}</Text>
             <Text style={{marginLeft: 12}}>{items.time} mins</Text>
-                
             </View>
         </Pressable>
       ))}
