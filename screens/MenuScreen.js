@@ -1,6 +1,6 @@
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView, StyleSheet } from "react-native";
 import React from "react";
-import { Ionicons, AntDesign, Foundation } from "@expo/vector-icons";
+import { Ionicons, AntDesign, Foundation, FontAwesome5 } from "@expo/vector-icons";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
 const MenuScreen = () => {
@@ -65,6 +65,17 @@ const MenuScreen = () => {
                 <Text style={{fontSize: 16, fontWeight:'600', marginLeft: 10}}>Outlet</Text>
                 <Text style={{marginLeft: 10, fontSize: 16, color: 'gray'}}>{route.params.address}</Text>
             </View>
+            <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 12}}>
+                <Text style={{marginLeft: 10, fontSize: 16, fontWeight: '600'}}>22 mins</Text>
+                <Text style={{marginLeft: 10, fontSize:16, fontWeight: '600'}}> Home</Text>
+            </View>
+            <Text style={{borderWidth: 0.5, height: 1, borderColor: 'gray', marginTop: 12}}></Text>
+            <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 10}}>
+            <FontAwesome5 name="bicycle" size={22} color="#FFA41B" style={{marginLeft: 10}}/>
+                <Text style={{marginLeft: 10, fontSize: 15, color: 'gray'}}>0-3 kms   |</Text>
+                <Text style={{marginLeft: 10, fontSize: 15, color: 'gray'}}>35 delivery fee will apply</Text>
+            </View>
+
         </View>
       </View>
     </SafeAreaView>
