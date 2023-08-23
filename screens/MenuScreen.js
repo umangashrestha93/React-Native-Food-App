@@ -1,14 +1,16 @@
-import { View, Text, SafeAreaView, StyleSheet } from "react-native";
+import { View, Text, SafeAreaView, StyleSheet, Pressable } from "react-native";
 import React from "react";
 import { Ionicons, AntDesign, Foundation, FontAwesome5 } from "@expo/vector-icons";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import FoodItems from "../component/FoodItems";
+import { ScrollView } from "react-native-gesture-handler";
 
 const MenuScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
   console.log(route.params);
   return (
-    <SafeAreaView>
+    <ScrollView style={{marginTop: 35}}>
       <View
         style={{
           height: 300,
@@ -78,7 +80,12 @@ const MenuScreen = () => {
 
         </View>
       </View>
-    </SafeAreaView>
+      <Text style={{fontSize: 17, textAlign: 'center', marginTop: 10, fontWeight: 500}}>MENU</Text>
+      <Text style={{borderWidth: 0.4, height: 1, borderColor: 'gray', marginTop: 10}}></Text>
+      {route.params.menu.map((item, index)=>(
+        <FoodItems data={item} key={`route${index}`}/>
+      ))}
+    </ScrollView>
   );
 };
 

@@ -33,6 +33,7 @@ function StackNavigator(){
     <Stack.Navigator>
       <Stack.Screen name="Home" component={MaterialTab} options={{headerShown: false}}/>
       <Stack.Screen name='menu' component={MenuScreen} options={{headerShown: false}}/>
+      
     </Stack.Navigator>
   )
 }
