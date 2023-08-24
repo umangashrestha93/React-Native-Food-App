@@ -10,6 +10,7 @@ const MenuScreen = () => {
   const route = useRoute();
   console.log(route.params);
   return (
+    <>
     <ScrollView style={{marginTop: 35}}>
       <View
         style={{
@@ -77,7 +78,6 @@ const MenuScreen = () => {
                 <Text style={{marginLeft: 10, fontSize: 15, color: 'gray'}}>0-3 kms   |</Text>
                 <Text style={{marginLeft: 10, fontSize: 15, color: 'gray'}}>35 delivery fee will apply</Text>
             </View>
-
         </View>
       </View>
       <Text style={{fontSize: 17, textAlign: 'center', marginTop: 10, fontWeight: 500}}>MENU</Text>
@@ -86,6 +86,7 @@ const MenuScreen = () => {
         <FoodItems data={item} key={`route${index}`}/>
       ))}
     </ScrollView>
+    </>
   );
 };
 

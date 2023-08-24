@@ -20,8 +20,8 @@ const FoodItems = ({data}) => {
       {
         foodData.map((item, i)=>(
             <>
-            <Pressable key={`foodData${i}`} onPress={()=>handleSelected(item.name)}>
-                <Text style={{fontSize: 16, fontWeight: '600'}}>{item.name}</Text>
+            <Pressable key={`foodData${i}`} onPress={()=>handleSelected(item.name)} style={{flexDirection: 'row',alignItems: 'center', justifyContent: 'space-between'}}>
+                <Text style={{fontSize: 16, fontWeight: '600'}}>{item.name} ({item.items.length})</Text>
                 <Entypo name="chevron-small-down" size={24} color="black" />
             </Pressable>
             {selected.includes(item.name)? (item.items.map((food, index)=>(
